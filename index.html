@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Titulo -->
+    <title>Manifest Flow</title>
+    <!-- CSS & Javascript -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/index.js"></script>
+</head>
+
+<body>
+    <h1 class="text-center text-dark fw-bold m-3">Manifest Flow</h1>
+
+    <h2 class="text-center text-dark m-3">Escuela de Movimiento</h2>
+
+    <p class="text-dark lead m-3">
+        Descubre la naturaleza humana a traves del movimiento y
+        la
+        contemplacion. Aqui encontraras un repertorio de videos, ensayos y documentales que inspiran una
+        vida en contacto estrecho con nuestro cuerpo, la practica consciente de disciplina fisica y
+        mental como via de liberacion.</p>
+
+
+    <p>(Ejecuta <strong>DevTools</strong>, y escribe en la consola JS la función: <strong>consultarClases()</strong>
+        para obtener un presupuesto)</p>
+    <div class="row">
+        <div class="col-4">
+            <h4 class="m-3 text-center">Escribe en la consola el código de la clase que te gustaría anotarte:</h4>
+
+            <ol class="lista-clases m-3">
+                <li>Clase de Animal Flow</li>
+                <li>Clase de Clavas & Mazas</li>
+                <li>Clase de Kettlebells</li>
+                <li>Clase de Danza</li>
+                <li>Clase de MMA</li>
+                <li>Clase de Vinyasa Yoga</li>
+        </div>
+
+        <div class="col-8">
+            <h4 class="m-3 text-center">Elige qué días de la semana quieres practicar:</h4>
+            <div class="text-center">
+                <label><input type="checkbox" name="diaPractica" value="Lunes"> Lunes</label>
+                <label><input type="checkbox" name="diaPractica" value="Martes"> Martes</label>
+                <label><input type="checkbox" name="diaPractica" value="Miércoles"> Miércoles</label>
+                <label><input type="checkbox" name="diaPractica" value="Jueves"> Jueves</label>
+                <label><input type="checkbox" name="diaPractica" value="Viernes"> Viernes</label>
+                <label><input type="checkbox" name="diaPractica" value="Sábado"> Sábado</label>
+                <br><br>
+                <button onclick="getDiasPractica()">Seleccionar</button>
+                <p>Días de práctica seleccionados: <span id="SeleccionDiasPractica"></span></p>
+            </div>
+        </div>
+    </div>
+
+    </ol>
+    <hr>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+/* iconos de bootstrap */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+body {
+    font-family: "Josefin Sans", serif, sans-serif;
+}
+
+.lista-clases {
+    font-size: 1rem;
+}
