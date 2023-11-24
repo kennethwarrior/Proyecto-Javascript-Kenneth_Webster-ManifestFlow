@@ -28,9 +28,56 @@
         vida en contacto estrecho con nuestro cuerpo, la practica consciente de disciplina fisica y
         mental como via de liberacion.</p>
 
+    <div class="row">
+        <div class="col-8">
+           <h2>Listado de clases:</h2>
 
-    <p>(Ejecuta <strong>DevTools</strong>, y escribe en la consola JS la función: <strong>consultarClases()</strong>
+           <ol>
+            <li><label for="yoga">Animal Flow - $500/clase</label>
+            <input type="checkbox" id="animal" onclick="saveData()"></li>
+
+            <li><label for="yoga">Vinyasa Yoga - $500/clase</label>
+            <input type="checkbox" id="yoga" onclick="saveData()"></li>
+
+            <li><label for="martialArts">MMA - $1000/clase</label>
+            <input type="checkbox" id="mma" onclick="saveData()"></li>
+
+            <li><label for="dancing">Danza Contemporánea - $400/clase</label>
+            <input type="checkbox" id="danza" onclick="saveData()"></li>
+
+            <li><label for="kettlebells">Pesas Rusas - $600/clase</label>
+            <input type="checkbox" id="pesas" onclick="saveData()"></li>
+
+            </li><label for="clubbells">Clavas & Mazas - $600/clase</label>
+            <input type="checkbox" id="clavas" onclick="saveData()"></li>
+        </ol>
+        </div>
+
+        <div class="col-4">
+            <label for="dias">Elegí la cantidad de días que querés venir a moverte:</label>
+            <select id="dias" onchange="saveData()">
+                <option value="1">1 día a la semana</option>
+                <option value="2">2 días a la semana</option>
+                <option value="3">3 días a la semana</option>
+                <option value="4">4 días a la semana</option>
+                <option value="5">5 días a la semana</option>
+            </select>
+
+            <p id="totalCostoMensual"></p>
+
+            <button onclick="mostrarCostoTotal()">Mostrar costo mensual</button>
+            <button onclick="deshacerSeleccion()">Deshacer selección</button>
+
+        </div>
+    </div>
+
+
+
+     <!--   ACA QUEDA COMENTADO LO DE LA ENTREGA ANTERIOR:
+
+     <p>(Ejecuta <strong>DevTools</strong>, y escribe en la consola JS la función: <strong>consultarClases()</strong>
         para obtener un presupuesto)</p>
+
     <div class="row">
         <div class="col-4">
             <h4 class="m-3 text-center">Escribe en la consola el código de la clase que te gustaría anotarte:</h4>
@@ -61,7 +108,9 @@
     </div>
 
     </ol>
-    <hr>
+-->
+
+
 </body>
 
 </html>

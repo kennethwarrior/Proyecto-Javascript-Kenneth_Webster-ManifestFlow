@@ -1,4 +1,4 @@
-class Subscripcion { 
+class subscripcionUsuario { 
     constructor(SubDeClases) {
         this.ClasesDelMes = SubDeClases
     }

@@ -3,11 +3,11 @@ const ClasesDelMes = []
 // ARRAY DE CLASES:
 
 const clases = [{codigo: 1, nombre: 'Animal Flow ', precioXclase: 500},
-                 {codigo: 2, nombre: 'Clavas & Mazas', precioXclase: 700},
-                 {codigo: 3, nombre: 'Kettlebells', precioXclase: 600},
-                 {codigo: 4, nombre: 'Danza', precioXclase: 300},
+                 {codigo: 2, nombre: 'Clavas & Mazas', precioXclase: 600},
+                 {codigo: 3, nombre: 'Pesas Rusas', precioXclase: 600},
+                 {codigo: 4, nombre: 'Danza', precioXclase: 400},
                  {codigo: 5, nombre: 'MMA', precioXclase: 1000},
-                 {codigo: 6, nombre: 'Vinyasa Yoga', precioXclase: 700}]
+                 {codigo: 6, nombre: 'Vinyasa Yoga', precioXclase: 500}]
 
 
 
@@ -32,7 +32,7 @@ function subscripcion() {
         if (respuesta === true) {
             subscripcion()
         } else {
-            const compra = new Subscripcion(ClasesDelMes)
+            const compra = new subscripcion(ClasesDelMes)
             let subtotal = compra.obtenerSubtotal()
             console.table(ClasesDelMes)
             // EN ESTE console.table no sé como hacer para agregar una nueva columna con la cantidad de clases x semana
