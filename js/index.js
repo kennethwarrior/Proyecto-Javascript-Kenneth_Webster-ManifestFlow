@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="card-body">
                             <h5 class="card-title">${item.nombre}</h5>
                             <p class="card-text">Precio: $${item.precio.toFixed(2)}</p>
-                            <button class="btn btn-primary agregar-carrito-boton">Agregar al Carrito</button>
+                            <button class="btn btn-primary agregar-carrito-boton" data-item='${JSON.stringify(item)}'>Agregar al Carrito</button>
                         </div>
                     </div>
                 `;
@@ -89,39 +89,51 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 });
 
-// Botón "Comprar"
-const comprarBtn = document.getElementById("comprar-btn");
-comprarBtn.addEventListener("click", () => realizarCompra());
-
-function realizarCompra() {
-    // Vaciar el carrito
-    miCarrito.items = [];
-    miCarrito.total = 0;
-
-    // Mostrar mensaje de agradecimiento
-    displaySuccessToast("Gracias por tu compra, te esperamos en el dojo!");
-
-    // Actualizar y mostrar el carrito
-    miCarrito.mostrarCarrito();
-}
-
 function agregarAlCarrito(item) {
-    // Si ya hay una Clase agregada, esto previene que no se vuelva a agregar
+    
     const isItemInCart = miCarrito.items.some(cartItem => cartItem.id === item.id);
 
     if (!isItemInCart) {
-        
+       
         miCarrito.agregarItem(item);
         displaySuccessToast(`${item.nombre} ha sido agregado a tu carrito.`);
+
+        // Disable del botón AgregarAlCarrito
+        if (item.categoria === "Clases") {
+            disableAgregarAlCarritoButton(item.id);
+        }
     } else {
-        
+        // Si vuelve a hacer click, WarningToast
         displayWarningToast(`${item.nombre} ya está en tu carrito.`);
     }
 }
 
-function displaySuccessToast(mensaje) {
+function disableAgregarAlCarritoButton(itemId) {
+    const buttons = document.querySelectorAll('.agregar-carrito-boton');
+    buttons.forEach(button => {
+        const buttonId = JSON.parse(button.getAttribute('data-item')).id;
+        if (buttonId === itemId) {
+            button.disabled = true;
+        }
+    });
+}
+
+function displayWarningToast(message) {
     Toastify({
-        text: mensaje,
+        text: message,
+        duration: 2000,
+        gravity: "top",
+        position: 'right',
+        stopOnFocus: true,
+        style: {
+            background: "#ffcc00", 
+        },
+    }).showToast();
+}
+
+function displaySuccessToast(message) {
+    Toastify({
+        text: message,
         duration: 2000,
         gravity: "top",
         position: 'right',
@@ -141,6 +153,36 @@ function displayErrorToast() {
         style: {
             background: "#ff6666",
         },
-    })
+        stopOnFocus: true,
+    }).showToast();
+}
 
+// Botón "Comprar"
+const comprarBtn = document.getElementById("comprar-btn");
+comprarBtn.addEventListener("click", () => realizarCompra());
+
+function realizarCompra() {
+    // Vaciar el carrito
+    miCarrito.items = [];
+    miCarrito.total = 0;
+
+    // Mostrar mensaje de agradecimiento
+    displayPurchaseToast("Gracias por tu compra, te esperamos en el dojo!");
+
+    // Actualizar y mostrar el carrito
+    miCarrito.mostrarCarrito();
+}
+// Toast para la compra
+function displayPurchaseToast(message) {
+    Toastify({
+        text: message,
+        duration: 3000,
+        gravity: "top",
+        position: 'right',
+        stopOnFocus: true,
+        style: {
+            background: "#007BFF", 
+            fontSize: "20px", 
+        },
+    }).showToast();
 }
