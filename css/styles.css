@@ -3,9 +3,74 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
 body {
-    font-family: "Josefin Sans", serif, sans-serif;
-}
+    font-family: "Josefin Sans", serif;
+    background-image: url(/img/45degreee_fabric.png);
+  }
 
-.lista-clases {
-    font-size: 1rem;
-}
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    background-color:rgba(141, 191, 209, 0.456);
+    transition: .5s ease-in;
+    box-shadow: 5px 20px 60px rgba(236, 146, 146, 0.519);
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+
+  .card-text {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+
+  .btn {
+    background-color: #1b1e21;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+  }
+  

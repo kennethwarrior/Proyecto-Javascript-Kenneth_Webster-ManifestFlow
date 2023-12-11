@@ -1,0 +1,140 @@
+[
+    {
+        "id": 1,
+        "nombre": "Animal Flow",
+        "precio": 500,
+        "categoria": "Clases"
+    },
+    {
+        "id": 2,
+        "nombre": "Clavas & Mazas",
+        "precio": 600,
+        "categoria": "Clases"
+    },
+    {
+        "id": 3,
+        "nombre": "Pesas Rusas",
+        "precio": 600,
+        "categoria": "Clases"
+    },
+    {
+        "id": 4,
+        "nombre": "Entrenamiento MMA",
+        "precio": 1000,
+        "categoria": "Clases"
+    },
+    {
+        "id": 5,
+        "nombre": "Muay Thai",
+        "precio": 800,
+        "categoria": "Clases"
+    },
+    {
+        "id": 6,
+        "nombre": "Jiujitsu",
+        "precio": 800,
+        "categoria": "Clases"
+    },
+    {
+        "id": 7,
+        "nombre": "Bio Danza",
+        "precio": 400,
+        "categoria": "Clases"
+    },
+    {
+        "id": 8,
+        "nombre": "Vinyasa Yoga",
+        "precio": 500,
+        "categoria": "Clases"
+    },
+    {
+        "id": 9,
+        "nombre": "Mindfulness",
+        "precio": 400,
+        "categoria": "Clases"
+    },
+    {
+        "id": 10,
+        "nombre": "Kriya & Pranayama",
+        "precio": 400,
+        "categoria": "Clases"
+    },
+    {
+        "id": 11,
+        "nombre": "Entrenamiento Funcional Articular",
+        "precio": 500,
+        "categoria": "Clases"
+    },
+    {
+        "id": 12,
+        "nombre": "Buzo de la Escuela",
+        "precio": 1800,
+        "categoria": "Artículos"
+    },
+    {
+        "id": 13,
+        "nombre": "Vendas",
+        "precio": 100,
+        "categoria": "Artículos"
+    },
+    {
+        "id": 14,
+        "nombre": "Guantillas MMA",
+        "precio": 800,
+        "categoria": "Artículos"
+    },
+    {
+        "id": 15,
+        "nombre": "Guantes Muay Thai",
+        "precio": 800,
+        "categoria": "Artículos"
+    },
+    {
+        "id": 16,
+        "nombre": "Esterilla de Yoga",
+        "precio": 1500,
+        "categoria": "Artículos"
+    },
+    {
+        "id": 17,
+        "nombre": "Calza deportiva",
+        "precio": 1000,
+        "categoria": "Artículos"
+    },
+    {
+        "id": 18,
+        "nombre": "Set Pesas Rusas",
+        "precio": 4000,
+        "categoria": "Artículos"
+    },
+    {
+        "id": 19,
+        "nombre": "Set Maza",
+        "precio": 3000,
+        "categoria": "Artículos"
+    },
+    {
+        "id": 20,
+        "nombre": "Set de Clavas",
+        "precio": 2500,
+        "categoria": "Artículos"
+    },
+    {
+        "id": 21,
+        "nombre": "Gi de Jiujitsu",
+        "precio": 3500,
+        "categoria": "Artículos"
+    },
+    {
+        "id": 22,
+        "nombre": "Rashguard",
+        "precio": 2200,
+        "categoria": "Artículos"
+    },
+    {
+        "id": 23,
+        "nombre": "Short Muay Thai",
+        "precio": 800,
+        "categoria": "Artículos"
+    }
+]
