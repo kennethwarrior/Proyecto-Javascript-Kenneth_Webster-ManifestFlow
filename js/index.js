@@ -19,7 +19,6 @@ const miCarrito = {
             this.items.splice(index, 1);
             this.calcularTotal();
             this.mostrarCarrito();
-            displayRemoveItemToast("Artículo removido del carrito");
         }
     },
 
@@ -88,20 +87,41 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Error fetching catalog:", error);
             displayErrorToast();
         });
-
-    // Botón "Comprar"
-    const comprarBtn = document.getElementById("comprar-btn");
-    comprarBtn.addEventListener("click", () => realizarCompra());
 });
 
-function agregarAlCarrito(item) {
-    miCarrito.agregarItem(item);
-    displaySuccessToast(`${item.nombre} ha sido agregado a tu carrito.`);
+// Botón "Comprar"
+const comprarBtn = document.getElementById("comprar-btn");
+comprarBtn.addEventListener("click", () => realizarCompra());
+
+function realizarCompra() {
+    // Vaciar el carrito
+    miCarrito.items = [];
+    miCarrito.total = 0;
+
+    // Mostrar mensaje de agradecimiento
+    displaySuccessToast("Gracias por tu compra, te esperamos en el dojo!");
+
+    // Actualizar y mostrar el carrito
+    miCarrito.mostrarCarrito();
 }
 
-function displaySuccessToast(message) {
+function agregarAlCarrito(item) {
+    // Si ya hay una Clase agregada, esto previene que no se vuelva a agregar
+    const isItemInCart = miCarrito.items.some(cartItem => cartItem.id === item.id);
+
+    if (!isItemInCart) {
+        
+        miCarrito.agregarItem(item);
+        displaySuccessToast(`${item.nombre} ha sido agregado a tu carrito.`);
+    } else {
+        
+        displayWarningToast(`${item.nombre} ya está en tu carrito.`);
+    }
+}
+
+function displaySuccessToast(mensaje) {
     Toastify({
-        text: message,
+        text: mensaje,
         duration: 2000,
         gravity: "top",
         position: 'right',
@@ -121,45 +141,6 @@ function displayErrorToast() {
         style: {
             background: "#ff6666",
         },
-        stopOnFocus: true,
-    }).showToast();
-}
+    })
 
-function displayPurchaseToast(message) {
-    Toastify({
-        text: message,
-        duration: 3000,
-        gravity: "top",
-        position: 'right',
-        stopOnFocus: true,
-        style: {
-            background: "blue",
-            fontSize: "18px",
-        },
-    }).showToast();
-}
-
-function displayRemoveItemToast(message) {
-    Toastify({
-        text: message,
-        duration: 2000,
-        gravity: "top",
-        position: 'right',
-        stopOnFocus: true,
-        style: {
-            background: "red",
-        },
-    }).showToast();
-}
-
-function realizarCompra() {
-    // Vaciar el carrito
-    miCarrito.items = [];
-    miCarrito.total = 0;
-
-    // Mostrar mensaje de agradecimiento
-    displayPurchaseToast("Gracias por tu compra, te esperamos en el dojo!");
-
-    // Actualizar y mostrar el carrito
-    miCarrito.mostrarCarrito();
 }
